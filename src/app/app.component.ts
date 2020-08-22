@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,Input,Output,HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ConvetorApp';
+  @Input() data:string;
+  @Output() params:string;
+
+  readme(){
+    console.log('hello king');        
+  }
+
+  showMe='true';
+  colorName='green';
+
+  //@HostListener()
 }
