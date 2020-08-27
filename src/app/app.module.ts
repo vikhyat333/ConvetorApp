@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {TodoModule} from './todo/todo.module';
 import { HoverEffectPipe } from './hover-effect.pipe';
+import { FormsModule } from '@angular/forms';
 import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TasksComponent } from './tasks/tasks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule
+    TodoModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

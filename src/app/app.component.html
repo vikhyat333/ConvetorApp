@@ -8,9 +8,25 @@
 <app-tasks></app-tasks>
 <h4>Compone inside different module</h4>
 <app-completed-tasks></app-completed-tasks>
-<h4>button</h4>
+<h4>button aka event minding</h4>
 
-<button (click)='readme()'>Click me king </button>
+<button (click)="readme(100);">Click me king </button>
+<br>
+
+<input (focus)="consoleLog();">
+
+<br>
+
+<div>Two way data binding</div>
+<br>
+<input [(ngModel)]="firstname" >
+
+<button (click)="readFirstname();">readme</button>
+<div>Will bring back the above data and post here</div>
+<br>
+<div>{{firstname}}</div>
+
+<br>
 <h5>Directives</h5>
 
 <h4>*ngIf and ngStyle</h4>

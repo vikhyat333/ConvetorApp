@@ -10,8 +10,8 @@ export class AppComponent {
   @Input() data:string;
   @Output() params:string;
 
-  readme(){
-    console.log('hello king');        
+  readme(id){
+    alert('hello king' + id);        
   }
   show1=false;
   show2=false;
@@ -40,7 +40,15 @@ export class AppComponent {
   Href1= 'http://localhost:4200';
   subString = 'this is just a string! binding with innner html prop - one way binding'
   updatedLink='www.google.com'
+  consoleLog(){
+    console.log('Hey from input of focus template to component(one way)');
+  }
 
+  firstname = '';
+
+  readFirstname(){
+    console.log(this.firstname);
+  }
 
   //@HostListener()
 }
