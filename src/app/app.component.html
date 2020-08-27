@@ -1,7 +1,69 @@
-<h1 class="bg-primary">Welcome to Convetor App</h1>
+<div [ngClass]="[clsName,clsName1]">
+    <h1>Welcome to Convetor App</h1>
+</div>
+<div [ngClass]="{'one':true,'two':true}">
+    Ng class with expresssin - more egs google
+</div>
+<h4>Component inside same module</h4>
 <app-tasks></app-tasks>
+<h4>Compone inside different module</h4>
 <app-completed-tasks></app-completed-tasks>
+<h4>button</h4>
 
 <button (click)='readme()'>Click me king </button>
-<div *ngIf='showMe' [ngStyle]='{color:colorName}'>Triggers on when it is true</div>
+<h5>Directives</h5>
+
+<h4>*ngIf and ngStyle</h4>
+
+<div *ngIf='showMe' [ngStyle]='{color:colorName}'>Triggers on when showme is true</div>
+<h4>*ngIf Else</h4>
+<div *ngIf="show1; else showElse">
+    Show message in black show1 is true
+</div>
+
+<ng-template #showElse> Show Else in green show1 is false </ng-template>
+<br>
+<h4>*ngIf then else</h4>
+
+<div *ngIf="show2; then showThis; else showThat"></div>
+<ng-template #showThis>show2 is true then/ message</ng-template>
+<ng-template #showThat>show2 is false else/ message</ng-template>
+<br>
+
+<h4>ngSwitchCase Eg</h4>
+<div [ngSwitch]="swithValue">
+    <div *ngSwitchCase='1'>Value is one</div>
+    <div *ngSwitchCase="'six'">Value is SIX</div>
+    <div *ngSwitchCase='3'>Value is 3</div>
+    <div *ngSwitchCase='4'>Value is 4</div>
+    <div *ngSwitchDefault>This is default value</div>
+</div>
+<br>
+<div [innerHTML]='subString'></div>
+<br>
+<a [href]='Href1' [attr.updatedLink]='updatedLink' [attr.data-link]='updatedLink'>CLick here ! Link to reload page</a>
+<br>
+<h4>*ngFor Examples </h4>
+<table class="table">
+    <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>index</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Even</th>
+        <th>Odd</th>
+    </tr>
+    
+        <tr *ngFor="let user of users;index as i;first as f;last as l;even as e;odd as o">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{ i }}</td>
+        <td>{{ f }}</td>
+        <td>{{ l }}</td>
+        <td>{{ e }}</td>
+        <td>{{ o }}</td>
+        </tr>
+
+</table>
 <router-outlet></router-outlet>
