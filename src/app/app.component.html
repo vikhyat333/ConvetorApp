@@ -65,21 +65,39 @@
         <th>User ID</th>
         <th>Name</th>
         <th>index</th>
-        <th>First</th>
-        <th>Last</th>
+        <th>city</th>
+        <th>Dob</th>
         <th>Even</th>
         <th>Odd</th>
     </tr>
     
         <tr *ngFor="let user of users;index as i;first as f;last as l;even as e;odd as o">
-        <td>{{user.id}}</td>
+        <td>{{user.id }}</td>
         <td>{{user.name}}</td>
         <td>{{ i }}</td>
-        <td>{{ f }}</td>
-        <td>{{ l }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.dob | date}}</td>
         <td>{{ e }}</td>
         <td>{{ o }}</td>
         </tr>
 
 </table>
+<div>
+    {{users[0].name | lowercase}}
+    {{users[0].dob | date:'longDate'}}
+    {{users[0].sal | currency:'INR':'INR':'9.0-1' | lowercase}}
+    <br>
+    {{users[1].name | lowercase}}
+    {{users[1].dob | date:'mediumDate'}}
+    {{users[1].sal | currency:'INR':'INR':'6.0-1'}}
+
+</div>
+<br>
+
+ <ul>
+     <li *ngFor="let user of users">
+<div [innerHTML]="[user.city,user.name] | highlight:[user.city,user.name]"></div>    
+</li>
+ </ul>
+
 <router-outlet></router-outlet>

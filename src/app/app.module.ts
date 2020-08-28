@@ -7,12 +7,14 @@ import {TodoModule} from './todo/todo.module';
 import { HoverEffectPipe } from './hover-effect.pipe';
 import { FormsModule } from '@angular/forms';
 import { TasksComponent } from './tasks/tasks.component';
+import { HighlightPipe } from './highlight.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HoverEffectPipe,
-    TasksComponent
+    TasksComponent,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,
