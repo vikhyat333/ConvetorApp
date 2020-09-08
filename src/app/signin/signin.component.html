@@ -1,0 +1,23 @@
+<p>signin works!</p>
+<br>
+<h2>Practise Template driven froms</h2>
+<div class="container">
+<form #signinForm="ngForm" (ngSubmit)="loginUser(signinForm)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="exampleInputEmail" ngModel required #exampleInputEmail="ngModel">
+      <small class="form-text text-muted" *ngIf="exampleInputEmail.touched && !exampleInputEmail.valid">Please enter your email address</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword" ngModel required #exampleInputPassword="ngModel">
+      <small class="form-text text-muted" *ngIf="exampleInputPassword.touched && !exampleInputpassword.valid">Please enter Password</small>
+
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="exampleCheck" ngModel>
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid">Submit</button>
+  </form>
+</div>

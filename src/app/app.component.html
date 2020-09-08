@@ -1,12 +1,15 @@
-<div [ngClass]="[clsName,clsName1]">
+<div [ngClass]="[clsName1]">
     <h1>Welcome to Convetor App</h1>
 </div>
-<div [ngClass]="{'one':true,'two':true}">
+<br>
+<br>
+<!--<div [ngClass]="{'one':true,'two':false}">-->
+<div [ngClass]="[clsName]">
     Ng class with expresssin - more egs google
 </div>
 <h4>Compone inside different module</h4>
 <app-completed-tasks></app-completed-tasks>
-<h4>button aka event minding</h4>
+<h4>button aka event binding</h4>
 
 <button (click)="readme(100);">Click me king </button>
 <br>
@@ -58,27 +61,31 @@
 <a [href]='Href1' [attr.updatedLink]='updatedLink' [attr.data-link]='updatedLink'>CLick here ! Link to reload page</a>
 <br>
 <h4>*ngFor Examples </h4>
-<table class="table">
+<table class="table table-striped">
+    <thead class="thead-dark">
     <tr>
-        <th>User ID</th>
-        <th>Name</th>
-        <th>index</th>
-        <th>city</th>
-        <th>Dob</th>
-        <th>Even</th>
-        <th>Odd</th>
+        <th scope="col">User ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">index</th>
+        <th scope="col">city</th>
+        <th scope="col">Dob</th>
+        <th scope="col">Sal</th>
+        <th scope="col">Even</th>
     </tr>
+</thead>
+<tbody>
     
-        <tr *ngFor="let user of users;index as i;first as f;last as l;even as e;odd as o">
-        <td>{{user.id }}</td>
-        <td>{{user.name}}</td>
-        <td>{{ i }}</td>
-        <td>{{ user.city }}</td>
-        <td>{{ user.dob | date}}</td>
-        <td>{{ e }}</td>
-        <td>{{ o }}</td>
+        <tr *ngFor="let user of users;index as i;first as f;last as l;even as e">
+        <th scope="row">{{user.id }}</th>
+        <td scope="row">{{user.name}}</td>
+        <td scope="row">{{ i }}</td>
+        <td scope="row">{{ user.city }}</td>
+        <td scope="row">{{ user.dob | date}}</td>
+        <td scope="row">{{ user.sal | currency:'INR':'INR':'6.0-1' | uppercase}}</td>
+        <td scope="row">{{ e }}</td>
+       <!-- <td scope="row">{{ o }}</td>-->
         </tr>
-
+</tbody>
 </table>
 <div>
     {{users[0].name | lowercase}}

@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductIdComponent } from './product-id/product-id.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
     PageNotFoundComponent,
     ProductViewComponent,
     ProductIdComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
