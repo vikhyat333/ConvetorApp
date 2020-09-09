@@ -18,6 +18,8 @@ import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductIdComponent } from './product-id/product-id.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { SigninComponent } from './signin/signin.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import{ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,15 @@ import { SigninComponent } from './signin/signin.component';
     ProductViewComponent,
     ProductIdComponent,
     AdminHomeComponent,
-    SigninComponent
+    SigninComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TodoModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule //step1 is to add reactive forms module
   ],
   providers: [
     //{provide:LocationStrategy, useClass:PathLocationStrategy}
