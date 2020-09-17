@@ -12,6 +12,7 @@ import { AdminGuardGuard } from './admin-guard.guard';
 import { SigninComponent } from './signin/signin.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ObservableComponent } from './observable/observable.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'signin',component:SigninComponent},
   {path: 'signout',component:CheckoutComponent},
   {path: 'observe',component:ObservableComponent},
+  {path: 'contacts',component:ContactsComponent},
   {path: 'admin',component:AdminHomeComponent,canActivate:[AdminGuardGuard]},
   {path:'products',
     children: [

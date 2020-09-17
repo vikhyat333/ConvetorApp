@@ -1,0 +1,10 @@
+<p>contacts works!</p>
+<h4>Contact List</h4>
+<ul>
+    <li *ngFor="let contact of contactList">
+        {{contact.contactName}}
+
+    </li>
+</ul>
+
+<button (click)="contactsService.callingFormTemplate()">Calling from service Directly</button>

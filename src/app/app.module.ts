@@ -21,6 +21,7 @@ import { SigninComponent } from './signin/signin.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import{ReactiveFormsModule} from '@angular/forms';
 import { ObservableComponent } from './observable/observable.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ObservableComponent } from './observable/observable.component';
     AdminHomeComponent,
     SigninComponent,
     CheckoutComponent,
-    ObservableComponent
+    ObservableComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
